@@ -1,0 +1,11 @@
+<div class="container color-back-header pt-3 pb-1">
+    <div class="row mt-2 text-center">
+        <div class="col-9 font-weight-light title">
+            <h2>{{'TITLE_HEADER' | translate}}</h2>
+        </div>
+        <div class="col-3">
+            <img [class.opacity-flag]="flag == 'unitedKingdomFlag'" class="icon-flag" (click)="changeFlag('unitedKingdomFlag')" src="../../assets/images/united-kingdom.svg" title="{{'ENGLISH' | translate}}" alt="{{'UNITED_KINGDOM_FLAG' | translate}}">
+            <img [class.opacity-flag]="flag == 'spainFlag'" class="icon-flag" (click)="changeFlag('spainFlag')" src="../../assets/images/spain.svg" title="{{'SPANISH' | translate}}" alt="{{'SPAIN_FLAG' | translate}}">
+        </div>
+    </div>
+</div>

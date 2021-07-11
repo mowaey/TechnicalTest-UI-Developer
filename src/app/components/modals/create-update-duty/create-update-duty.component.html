@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h4 *ngIf="data.type === 'create'" class="modal-title">{{'CREATE_TITLE' | translate}}</h4>
+    <h4 *ngIf="data.type === 'update'" class="modal-title">{{'UPDATE_TITLE' | translate}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row justify-content-center">
+        <form [formGroup]="registerForm" novalidate>
+            <p *ngIf="data.type === 'create'" class="normal-text-2">{{'NAME_ITEM' | translate}}:</p>
+            <p *ngIf="data.type === 'update'" class="normal-text-2">{{'NEW_NAME_ITEM' | translate}}:</p>
+            <input type="text" id="name" name="name" class="form-control" formControlName="name" required minlength="4" [(ngModel)]="data.name">
+            <div *ngIf="registerForm.controls['name'].invalid && (registerForm.controls['name'].dirty || registerForm.controls['name'].touched)" class="alert alert-danger">
+                <div *ngIf="registerForm.controls['name'].errors.required">
+                    {{'NAME_REQUIRED' | translate}}
+                </div>
+                <div *ngIf="registerForm.controls['name'].errors.minlength">
+                    {{'NAME_LENGTH' | translate}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="saveData()">{{'SAVE' | translate}}</button>
+    <button type="button" class="btn btn-secundary" (click)="close()">{{'CLOSE' | translate}}</button>
+</div>

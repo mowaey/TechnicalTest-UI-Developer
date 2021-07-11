@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.color-back {
+    background: -prefix-linear-gradient(left, rgb(178, 189, 187), #dfcdcd);
+    background: linear-gradient(to right, rgb(178, 189, 187), #dfcdcd);
+}
+
+
+/* Fonts */
+
+.title {
+    font-family: 'PermanentMarkerRegular', 'Times New Roman', serif, Times;
+}
+
+.normal-text-1 {
+    font-family: 'LettersLearners', Georgia, Times, serif;
+}
+
+.normal-text-2 {
+    font-family: 'LobsterRegular', serif, Georgia, Times;
+}
+
+.normal-text-3 {
+    font-family: 'Apollo', Times, Georgia, serif;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

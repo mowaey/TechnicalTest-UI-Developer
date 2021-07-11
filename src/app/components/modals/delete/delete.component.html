@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{'DELETE_TITLE' | translate}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row justify-content-center">
+        <p class="normal-text-2">{{'DELETE_QUESTION' | translate}}{{data.id}}</p>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="deleteData()">{{'DELETE_ITEM' | translate}}</button>
+    <button type="button" class="btn btn-secundary" (click)="close()">{{'CLOSE' | translate}}</button>
+</div>
